@@ -38,6 +38,7 @@ def predict():
 			#filename = secure_filename(file.filename)
 			#sfname = 'uploads/'+str(secure_filename(file.filename))
 		prediction = new_model.predict(p)
+		#o = new_model.evaluate(p)
 		output = prediction.argmax()
 	return render_template('index.html', prediction_text='Predicted image is : {}'.format(output))
 
